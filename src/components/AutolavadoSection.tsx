@@ -46,11 +46,11 @@ const AutolavadoSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-primary/20 text-foreground px-4 py-2 rounded-full font-body font-semibold mb-4">
-            ⭐ Nuestro Servicio Principal
+          <span className="inline-block bg-primary/20 text-foreground px-4 py-2 rounded-full font-body font-bold mb-4">
+            Nuestro servicio premium
           </span>
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-            Autolavado de Mascotas
+            Autolavado de mascotas
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
             Te alquilamos nuestras instalaciones para que puedas bañar a tu peludo con todo el amor, 
@@ -90,9 +90,6 @@ const AutolavadoSection = () => {
           className="bg-primary rounded-3xl p-8 md:p-12 relative overflow-hidden"
         >
           {/* Decorative Elements */}
-          <div className="absolute top-4 right-8 text-4xl opacity-50">🐕</div>
-          <div className="absolute bottom-4 left-8 text-4xl opacity-50">🐈</div>
-
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
               <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-4">
@@ -121,10 +118,7 @@ const AutolavadoSection = () => {
 
             <div className="flex-1 max-w-sm">
               <div className="bg-card rounded-2xl p-6 shadow-xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <Heart className="text-accent" size={24} />
-                  <span className="font-display font-bold text-xl text-foreground">Importante</span>
-                </div>
+              <p className="font-display font-bold text-xl text-foreground text-center mb-4">¡IMPORTANTE!</p>
                 <ul className="space-y-3 font-body text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>

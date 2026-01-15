@@ -8,7 +8,6 @@ const locations = [
     reference: "A dos cuadras de la Universidad Libre, cerca de la AV Boyacá",
     mapUrl: "https://maps.app.goo.gl/SpdQJR8Q8u7SEPWx7",
     transport: "Busca 'Edificio Kashi' en Google Maps o Waze",
-    emoji: "🏢",
   },
   {
     name: "Sede Teusaquillo",
@@ -17,7 +16,6 @@ const locations = [
     mapUrl: "https://maps.app.goo.gl/SpdQJR8Q8u7SEPWx7",
     transport: "Busca 'Kodama Pet Care' en Google Maps o Waze",
     parking: "No parquear sobre el andén, solo frente a la entrada del local",
-    emoji: "🌳",
   },
   {
     name: "Sede Soacha",
@@ -26,7 +24,6 @@ const locations = [
     mapUrl: "https://maps.app.goo.gl/6unu3KcwageGrz9R6",
     transport: "Busca 'Centro Comercial Mi Plaza Soacha' en Maps",
     parking: "Zona de parqueo disponible en el CC",
-    emoji: "🛒",
   },
 ];
 
@@ -45,7 +42,7 @@ const LocationsSection = () => {
             📍 Encuéntranos
           </span>
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-            Nuestras Sedes
+            Nuestras sedes
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
             Tenemos 3 ubicaciones en Bogotá y Soacha para tu comodidad. 
@@ -66,12 +63,9 @@ const LocationsSection = () => {
             >
               {/* Header */}
               <div className="bg-primary p-6">
-                <div className="flex items-center gap-3">
-                  <span className="text-4xl">{location.emoji}</span>
-                  <h3 className="font-display font-bold text-xl text-foreground">
-                    {location.name}
-                  </h3>
-                </div>
+                <h3 className="font-display font-bold text-xl text-foreground text-center">
+                  {location.name}
+                </h3>
               </div>
 
               {/* Content */}
@@ -117,12 +111,12 @@ const LocationsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 bg-primary/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left"
+          className="mt-12 bg-primary/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-center gap-2 text-center sm:text-left"
         >
-          <Clock className="text-secondary" size={32} />
+          <Clock className="text-secondary" size={24} />
           <p className="font-body text-foreground">
             <span className="font-bold">Recuerda:</span> Solo atendemos con citas previamente confirmadas 
-            para mantener un servicio personalizado 🐕📝
+            para mantener un servicio personalizado
           </p>
         </motion.div>
       </div>

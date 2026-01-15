@@ -35,7 +35,7 @@ const Header = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="font-body font-medium text-foreground hover:text-secondary transition-colors"
+              className="font-body font-bold text-foreground hover:text-secondary transition-colors"
             >
               {item.label}
             </motion.a>
@@ -49,8 +49,8 @@ const Header = () => {
             transition={{ delay: 0.5 }}
             className="flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-body font-semibold hover:scale-105 transition-transform"
           >
-            <Phone size={18} />
-            Agendar Cita
+            <Phone size={16} />
+            Agendar cita
           </motion.a>
         </nav>
 
@@ -89,7 +89,7 @@ const Header = () => {
               className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-full font-body font-semibold"
             >
               <Phone size={18} />
-              Agendar Cita
+              AGENDAR CITA
             </a>
           </div>
         </motion.nav>

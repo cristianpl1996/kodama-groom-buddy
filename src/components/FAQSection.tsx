@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "¿Y si me da miedito cortar las uñas?",
-    answer: "¡No te asustes! Para eso está el acompañamiento de personal altamente capacitado. Nuestro anfitrión lo hará por ti y estará durante todo el proceso para guiarte. 🥺",
+    answer: "¡No te asustes! Para eso está el acompañamiento de personal altamente capacitado. Nuestro anfitrión lo hará por ti y estará durante todo el proceso para guiarte.",
   },
   {
     question: "¿Le lavan los dientes?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "¿Cuántas personas pueden ingresar por mascota?",
-    answer: "Cada peludo puede tener DOS acompañantes. ¡Vengan en familia! 🐕",
+    answer: "Cada peludo puede tener DOS acompañantes. ¡Vengan en familia!",
   },
   {
     question: "¿Mi mascota tiene pulgas o garrapatas, qué debo hacer?",
@@ -49,35 +49,13 @@ const personalityTest = [
   { emoji: "🦀", text: "Odia que le toquen las patas o corten uñas" },
   { emoji: "🦘", text: "Escapista, se cree Houdini" },
   { emoji: "🙉", text: "Es gritón y llora mucho" },
-  { emoji: "👺🐶", text: "Es bravito y territorial con otros perros" },
+  { emoji: "👺", text: "Es bravito y territorial con otros perros" },
   { emoji: "🐲", text: "Es un chacal, puede ser agresivo" },
 ];
 
 const FAQSection = () => {
   return (
     <section id="faq" className="py-20 bg-kodama-cream relative">
-      {/* Decorative background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <svg className="absolute top-20 left-10 w-16 h-16 text-primary/30" viewBox="0 0 100 100">
-          <path
-            d="M20 50 Q 50 20, 80 50"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="8"
-            strokeLinecap="round"
-          />
-        </svg>
-        <svg className="absolute bottom-20 right-10 w-20 h-20 text-primary/30" viewBox="0 0 100 100">
-          <path
-            d="M10 50 Q 30 20, 50 50 T 90 50"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="8"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -86,8 +64,8 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full font-body font-semibold mb-4">
-            ❓ Preguntas Frecuentes
+          <span className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full font-body font-bold mb-4">
+            Preguntas frecuentes
           </span>
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
             ¿Tienes dudas?
@@ -129,12 +107,9 @@ const FAQSection = () => {
             viewport={{ once: true }}
           >
             <div className="bg-card rounded-3xl p-8 shadow-lg sticky top-24">
-              <div className="flex items-center gap-2 mb-6">
-                <span className="text-3xl">📝</span>
-                <h3 className="font-display font-bold text-xl text-foreground">
-                  Test de Genio de mi 🐱🐶
-                </h3>
-              </div>
+              <h3 className="font-display font-bold text-xl text-foreground text-center mb-4">
+                ¡REALIZA EL TEST DE GENIO DE TU MASCOTA!
+              </h3>
               <p className="font-body text-muted-foreground mb-6">
                 ¿Cómo es tu peludo en el baño? Esto nos ayuda a saber qué manejo tener con él. 
                 ¡Sé honesto/a!
@@ -154,8 +129,8 @@ const FAQSection = () => {
                   </motion.div>
                 ))}
               </div>
-              <p className="font-body text-sm text-muted-foreground mt-6 italic">
-                Cuéntanos por WhatsApp cuál describe mejor a tu peludo 💛
+              <p className="font-body text-sm text-muted-foreground mt-6 italic text-center">
+                Conoce el genio de tu peludo y elige el mejor servicio para él.
               </p>
             </div>
           </motion.div>

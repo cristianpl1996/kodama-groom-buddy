@@ -5,13 +5,6 @@ import kodamaLogo from "@/assets/kodama-logo.png";
 const Footer = () => {
   return (
     <footer id="contacto" className="bg-foreground text-card py-16 relative overflow-hidden">
-      {/* Decorative Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-10 left-10 text-6xl">🐕</div>
-        <div className="absolute top-20 right-20 text-5xl">🐈</div>
-        <div className="absolute bottom-10 left-1/3 text-6xl">🛁</div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -20,9 +13,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <img src={kodamaLogo} alt="Kodama Pet Care" className="h-20 w-auto mb-4 brightness-0 invert" />
+            <img src={kodamaLogo} alt="Kodama Pet Care" className="h-20 w-auto mb-4" />
             <p className="font-body text-card/80 text-sm">
-              Baña a tu peludo como un PRO. Instalaciones equipadas con todo lo que necesitas 
+              Baña a tu peludo como un profesional. Instalaciones equipadas con todo lo que necesitas 
               para consentir a tu mascota.
             </p>
           </motion.div>
@@ -114,10 +107,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-card/20 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-sm text-card/60 flex items-center gap-1">
-            Hecho con <Heart className="text-accent" size={16} /> para los peluditos de Colombia
-          </p>
+        <div className="border-t border-card/20 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="font-body text-sm text-card/60">
             © 2026 Kodama Pet Care. Todos los derechos reservados.
           </p>
