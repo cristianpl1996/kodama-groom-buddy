@@ -105,7 +105,7 @@ const Footer = () => {
               href="https://wa.me/573107547787"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-foreground px-6 py-3 rounded-full font-body font-semibold mt-6 hover:scale-105 transition-transform"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-body font-semibold mt-6 hover:scale-105 transition-transform"
             >
               <MessageCircle size={20} />
               Agendar por WhatsApp
@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-card/20 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-body text-sm text-card/60 flex items-center gap-1">
-            Hecho con <Heart className="text-primary" size={16} /> para los peluditos de Colombia
+            Hecho con <Heart className="text-accent" size={16} /> para los peluditos de Colombia
           </p>
           <p className="font-body text-sm text-card/60">
             © 2026 Kodama Pet Care. Todos los derechos reservados.

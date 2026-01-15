@@ -41,7 +41,7 @@ const LocationsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-kodama-dark/10 text-kodama-dark px-4 py-2 rounded-full font-body font-semibold mb-4">
+          <span className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full font-body font-semibold mb-4">
             📍 Encuéntranos
           </span>
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
@@ -77,7 +77,7 @@ const LocationsSection = () => {
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div className="flex items-start gap-3">
-                  <MapPin className="text-kodama-dark flex-shrink-0 mt-1" size={20} />
+                  <MapPin className="text-secondary flex-shrink-0 mt-1" size={20} />
                   <div>
                     <p className="font-body font-semibold text-foreground">{location.address}</p>
                     <p className="font-body text-sm text-muted-foreground">{location.reference}</p>
@@ -85,13 +85,13 @@ const LocationsSection = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Navigation className="text-kodama-dark flex-shrink-0 mt-1" size={20} />
+                  <Navigation className="text-secondary flex-shrink-0 mt-1" size={20} />
                   <p className="font-body text-sm text-muted-foreground">{location.transport}</p>
                 </div>
 
                 {location.parking && (
                   <div className="flex items-start gap-3">
-                    <Car className="text-kodama-dark flex-shrink-0 mt-1" size={20} />
+                    <Car className="text-secondary flex-shrink-0 mt-1" size={20} />
                     <p className="font-body text-sm text-muted-foreground">{location.parking}</p>
                   </div>
                 )}
@@ -102,7 +102,7 @@ const LocationsSection = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex items-center justify-center gap-2 w-full bg-kodama-dark text-card py-3 rounded-xl font-body font-semibold mt-4 group-hover:shadow-md transition-shadow"
+                  className="flex items-center justify-center gap-2 w-full bg-secondary text-secondary-foreground py-3 rounded-xl font-body font-semibold mt-4 group-hover:shadow-md transition-shadow"
                 >
                   <MapPin size={18} />
                   Ver en Mapa
@@ -119,7 +119,7 @@ const LocationsSection = () => {
           viewport={{ once: true }}
           className="mt-12 bg-primary/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left"
         >
-          <Clock className="text-kodama-dark" size={32} />
+          <Clock className="text-secondary" size={32} />
           <p className="font-body text-foreground">
             <span className="font-bold">Recuerda:</span> Solo atendemos con citas previamente confirmadas 
             para mantener un servicio personalizado 🐕📝

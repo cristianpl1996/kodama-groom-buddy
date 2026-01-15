@@ -112,7 +112,7 @@ const AutolavadoSection = () => {
                     transition={{ delay: index * 0.05 }}
                     className="flex items-center gap-2"
                   >
-                    <CheckCircle2 className="text-kodama-dark flex-shrink-0" size={20} />
+                    <CheckCircle2 className="text-secondary flex-shrink-0" size={20} />
                     <span className="font-body text-foreground">{item}</span>
                   </motion.div>
                 ))}
@@ -122,12 +122,12 @@ const AutolavadoSection = () => {
             <div className="flex-1 max-w-sm">
               <div className="bg-card rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center gap-3 mb-4">
-                  <Heart className="text-kodama-dark" size={24} />
+                  <Heart className="text-accent" size={24} />
                   <span className="font-display font-bold text-xl text-foreground">Importante</span>
                 </div>
                 <ul className="space-y-3 font-body text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="text-kodama-dark font-bold">•</span>
+                    <span className="text-secondary font-bold">•</span>
                     Si te pasas del tiempo, se cobra por minuto exacto
                   </li>
                   <li className="flex items-start gap-2">

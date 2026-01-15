@@ -60,10 +60,10 @@ export default {
         kodama: {
           yellow: "hsl(var(--kodama-yellow))",
           "yellow-light": "hsl(var(--kodama-yellow-light))",
-          gold: "hsl(var(--kodama-gold))",
+          coral: "hsl(var(--kodama-coral))",
+          orange: "hsl(var(--kodama-orange))",
           cream: "hsl(var(--kodama-cream))",
           dark: "hsl(var(--kodama-dark))",
-          black: "hsl(var(--kodama-black))",
         },
       },
       borderRadius: {
@@ -72,7 +72,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ["'Baloo 2'", "cursive"],
+        display: ["Fredoka", "sans-serif"],
         body: ["Nunito", "sans-serif"],
       },
       keyframes: {
