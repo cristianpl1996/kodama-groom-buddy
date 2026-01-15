@@ -86,7 +86,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full font-body font-semibold mb-4">
+          <span className="inline-block bg-kodama-dark/10 text-kodama-dark px-4 py-2 rounded-full font-body font-semibold mb-4">
             ❓ Preguntas Frecuentes
           </span>
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">

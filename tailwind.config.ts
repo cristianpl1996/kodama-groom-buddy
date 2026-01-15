@@ -60,10 +60,10 @@ export default {
         kodama: {
           yellow: "hsl(var(--kodama-yellow))",
           "yellow-light": "hsl(var(--kodama-yellow-light))",
-          coral: "hsl(var(--kodama-coral))",
-          orange: "hsl(var(--kodama-orange))",
+          gold: "hsl(var(--kodama-gold))",
           cream: "hsl(var(--kodama-cream))",
           dark: "hsl(var(--kodama-dark))",
+          black: "hsl(var(--kodama-black))",
         },
       },
       borderRadius: {

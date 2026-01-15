@@ -58,13 +58,13 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-card/90 backdrop-blur px-4 py-2 rounded-full mb-6"
             >
-              <Sparkles className="text-secondary" size={20} />
+              <Sparkles className="text-kodama-dark" size={20} />
               <span className="font-body font-semibold text-foreground">Solo con cita previa</span>
             </motion.div>
 
             <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Baña a tu peludo{" "}
-              <span className="text-secondary">como un PRO</span>
+              <span className="text-kodama-dark">como un PRO</span>
             </h1>
 
             <p className="font-body text-lg md:text-xl text-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0">
@@ -79,7 +79,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-body font-bold text-lg shadow-lg hover:shadow-xl transition-shadow"
+                className="inline-flex items-center justify-center gap-2 bg-kodama-dark text-card px-8 py-4 rounded-full font-body font-bold text-lg shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Phone size={22} />
                 Agendar Cita
@@ -156,7 +156,7 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 3.5, repeat: Infinity }}
-                className="absolute -bottom-4 -right-4 bg-secondary p-4 rounded-2xl shadow-lg"
+                className="absolute -bottom-4 -right-4 bg-kodama-dark p-4 rounded-2xl shadow-lg"
               >
                 <span className="text-3xl">💛</span>
               </motion.div>

@@ -47,7 +47,7 @@ const Header = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
-            className="flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-body font-semibold hover:scale-105 transition-transform"
+            className="flex items-center gap-2 bg-kodama-dark text-card px-4 py-2 rounded-full font-body font-semibold hover:scale-105 transition-transform"
           >
             <Phone size={18} />
             Agendar Cita
@@ -77,7 +77,7 @@ const Header = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="font-body font-medium text-foreground hover:text-secondary transition-colors py-2"
+                className="font-body font-medium text-foreground hover:text-kodama-dark transition-colors py-2"
               >
                 {item.label}
               </a>
@@ -86,7 +86,7 @@ const Header = () => {
               href="https://wa.me/573107547787"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-full font-body font-semibold"
+              className="flex items-center justify-center gap-2 bg-kodama-dark text-card px-4 py-3 rounded-full font-body font-semibold"
             >
               <Phone size={18} />
               Agendar Cita
