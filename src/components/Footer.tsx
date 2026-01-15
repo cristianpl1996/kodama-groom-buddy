@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Instagram, Facebook, Heart, MessageCircle } from "lucide-react";
+import kodamaLogo from "@/assets/kodama-logo.png";
 
 const Footer = () => {
   return (
@@ -19,15 +20,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-2xl">🐕</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-xl text-card">Kodama</span>
-                <span className="font-body text-xs text-secondary font-semibold tracking-wider">PET CARE</span>
-              </div>
-            </div>
+            <img src={kodamaLogo} alt="Kodama Pet Care" className="h-20 w-auto mb-4 brightness-0 invert" />
             <p className="font-body text-card/80 text-sm">
               Baña a tu peludo como un PRO. Instalaciones equipadas con todo lo que necesitas 
               para consentir a tu mascota.

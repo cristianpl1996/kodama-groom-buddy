@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import kodamaLogo from "@/assets/kodama-logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,15 +21,9 @@ const Header = () => {
           href="#inicio"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2"
+          className="flex items-center"
         >
-          <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-2xl">🐕</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display font-bold text-xl text-foreground">Kodama</span>
-            <span className="font-body text-xs text-secondary font-semibold tracking-wider">PET CARE</span>
-          </div>
+          <img src={kodamaLogo} alt="Kodama Pet Care" className="h-14 w-auto" />
         </motion.a>
 
         {/* Desktop Navigation */}
