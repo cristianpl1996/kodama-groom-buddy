@@ -72,7 +72,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ["Fredoka", "sans-serif"],
+        display: ["'Baloo 2'", "cursive"],
         body: ["Nunito", "sans-serif"],
       },
       keyframes: {
