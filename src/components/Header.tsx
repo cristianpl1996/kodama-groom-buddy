@@ -41,7 +41,7 @@ const Header = () => {
             </motion.a>
           ))}
           <motion.a
-            href="https://wa.me/573107547787"
+            href="https://wa.me/573150972278"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -83,7 +83,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/573107547787"
+              href="https://wa.me/573150972278"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-full font-body font-semibold"
