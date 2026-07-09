@@ -17,14 +17,14 @@ const locations = [
     transport: "Busca 'Kodama Pet Care' en Google Maps o Waze",
     parking: "No parquear sobre el andén, solo frente a la entrada del local",
   },
-  {
+  /*{
     name: "Sede Soacha",
     address: "Centro Comercial Mi Plaza Soacha, Local 78",
     reference: "Frente a la entrada vehicular del CC",
     mapUrl: "https://maps.app.goo.gl/6unu3KcwageGrz9R6",
     transport: "Busca 'Centro Comercial Mi Plaza Soacha' en Maps",
     parking: "Zona de parqueo disponible en el CC",
-  },
+  },*/
 ];
 
 const LocationsSection = () => {
@@ -45,13 +45,13 @@ const LocationsSection = () => {
             Nuestras sedes
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tenemos 3 ubicaciones en Bogotá y Soacha para tu comodidad. 
+            Tenemos 2 ubicaciones en Bogotá para tu comodidad. 
             ¡Elige la más cercana a ti!
           </p>
         </motion.div>
 
         {/* Locations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-16">
           {locations.map((location, index) => (
             <motion.div
               key={location.name}

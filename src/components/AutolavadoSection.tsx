@@ -164,7 +164,7 @@ const AutolavadoSection = () => {
               Listado de Precios
             </h3>
             <p className="font-body text-foreground/80 mb-10 text-center text-lg">
-              Autolavado (Soacha y Normandía)
+              Autolavado (Normandía)
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
