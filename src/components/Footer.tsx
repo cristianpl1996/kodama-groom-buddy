@@ -47,18 +47,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://wa.me/573150972278"
+                  href="https://wa.me/573107547787"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 font-body text-card/80 hover:text-primary transition-colors"
                 >
                   <MessageCircle size={18} />
-                  +57 315 097 2278
+                  +57 310 754 7787
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+573150972278"
+                  href="tel:+573107547787"
                   className="flex items-center gap-2 font-body text-card/80 hover:text-primary transition-colors"
                 >
                   <Phone size={18} />
@@ -95,7 +95,7 @@ const Footer = () => {
               </a>
             </div>
             <a
-              href="https://wa.me/573150972278"
+              href="https://wa.me/573107547787"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-body font-semibold mt-6 hover:scale-105 transition-transform"
