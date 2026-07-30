@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { MAIN_WHATSAPP } from "@/data/sedes";
 import { Phone, Calendar, Sparkles } from "lucide-react";
 import kodamaLogo2 from "@/assets/kodama-logo2.png";
 
@@ -51,7 +52,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.a
-                href="https://wa.me/573107547787"
+                href={MAIN_WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

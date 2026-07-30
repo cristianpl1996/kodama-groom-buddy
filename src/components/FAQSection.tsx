@@ -8,6 +8,18 @@ import {
 
 const faqs = [
   {
+    question: "¿Qué servicio hay en cada sede?",
+    answer: "Sede Esmeralda (Teusaquillo, Cra 58 #45-28) es nuestra sede exclusiva de baño y peluquería, atiende de lunes a sábado de 8:00 am a 5:00 pm. Sede Normandía (Edificio Kashi, Cra 71 #53-84 local 102) y Sede Cedritos (Calle 140 #13-36 local 9, C.C. Avenida 140) son de autolavado, donde tú mismo bañas a tu peludo como un PRO. Cedritos además cuenta con cabina automatizada y ozonoterapia.",
+  },
+  {
+    question: "¿A qué número debo escribir para agendar?",
+    answer: "Cada sede tiene su propio número de WhatsApp: Esmeralda (baño y peluquería) +57 310 754 7787, Normandía (autolavado) +57 323 644 6117 y Cedritos (autolavado) +57 319 211 7868. Escribe directamente al de la sede que quieras visitar para agendar más rápido.",
+  },
+  {
+    question: "¿Dónde puedo parquear en la sede Cedritos?",
+    answer: "Llega en vehículo buscando 'Centro Comercial Avenida 140' en Google Maps o Waze; estamos en el local 9, al lado de Laika y Pasteur. Puedes dejar tu vehículo en el OXXO de Cedritos o en la bahía de KFC.",
+  },
+  {
     question: "¿Qué pasa si me paso del tiempo de la hora?",
     answer: "Se te cobrará el minuto con base al valor total de la hora. Si tu mascota está en el precio de $35.000, dividimos ese valor en 60 minutos y te sumamos el valor exacto que corresponde al tiempo adicional.",
   },

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Instagram, Facebook, Heart, MessageCircle } from "lucide-react";
 import kodamaLogo from "@/assets/kodama-logo.png";
+import { sedes, MAIN_WHATSAPP } from "@/data/sedes";
 
 const Footer = () => {
   return (
@@ -44,27 +45,33 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
           >
             <h4 className="font-display font-bold text-lg text-card mb-4">Contacto</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="https://wa.me/573107547787"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 font-body text-card/80 hover:text-primary transition-colors"
-                >
-                  <MessageCircle size={18} />
-                  +57 310 754 7787
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+573107547787"
-                  className="flex items-center gap-2 font-body text-card/80 hover:text-primary transition-colors"
-                >
-                  <Phone size={18} />
-                  Llamar ahora
-                </a>
-              </li>
+            <ul className="space-y-4">
+              {sedes.map((sede) => (
+                <li key={sede.name}>
+                  <p className="font-body font-semibold text-card text-sm">
+                    {sede.name}{" "}
+                    <span className="text-card/60 font-normal">· {sede.service}</span>
+                  </p>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
+                    <a
+                      href={sede.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 font-body text-card/80 hover:text-primary transition-colors text-sm"
+                    >
+                      <MessageCircle size={16} />
+                      {sede.phoneDisplay}
+                    </a>
+                    <a
+                      href={`tel:+${sede.phone}`}
+                      className="flex items-center gap-1 font-body text-card/60 hover:text-primary transition-colors text-sm"
+                    >
+                      <Phone size={14} />
+                      Llamar
+                    </a>
+                  </div>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
@@ -95,7 +102,7 @@ const Footer = () => {
               </a>
             </div>
             <a
-              href="https://wa.me/573107547787"
+              href={MAIN_WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-body font-semibold mt-6 hover:scale-105 transition-transform"

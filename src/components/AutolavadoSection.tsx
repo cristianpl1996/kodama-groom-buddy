@@ -6,7 +6,11 @@ import {
   Scissors,
   Heart,
   CheckCircle2,
+  MessageCircle,
 } from "lucide-react";
+import { sedes } from "@/data/sedes";
+
+const cedritos = sedes.find((sede) => sede.name === "Sede Cedritos")!;
 
 const features = [
   {
@@ -164,7 +168,7 @@ const AutolavadoSection = () => {
               Listado de Precios
             </h3>
             <p className="font-body text-foreground/80 mb-10 text-center text-lg">
-              Autolavado (Normandía)
+              Autolavado (Sede Normandía)
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -230,6 +234,44 @@ const AutolavadoSection = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Cedritos - servicios especiales */}
+            <div className="bg-card rounded-2xl p-6 md:p-8 shadow-lg">
+              <div className="flex flex-col md:flex-row md:items-center gap-6">
+                <div className="flex-1">
+                  <h4 className="font-display font-bold text-2xl text-foreground mb-2">
+                    Sede Cedritos: cabina automatizada y ozonoterapia
+                  </h4>
+                  <p className="font-body text-muted-foreground mb-4">
+                    En nuestra sede de Cedritos encuentras autolavado con cabina automatizada
+                    y servicio de ozonoterapia para tu peludo. Escríbenos para conocer
+                    disponibilidad y tarifas de estos servicios.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Cabina automatizada", "Ozonoterapia", "Autolavado"].map((item) => (
+                      <span
+                        key={item}
+                        className="inline-flex items-center gap-1 bg-primary/25 text-foreground px-3 py-1 rounded-full font-body text-xs font-semibold"
+                      >
+                        <Sparkles size={12} />
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <motion.a
+                  href={cedritos.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-body font-bold whitespace-nowrap shadow-lg"
+                >
+                  <MessageCircle size={20} />
+                  Agendar Cedritos
+                </motion.a>
+              </div>
             </div>
           </div>
         </motion.div>

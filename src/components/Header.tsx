@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import kodamaLogo from "@/assets/kodama-logo.png";
+import { MAIN_WHATSAPP } from "@/data/sedes";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ const Header = () => {
             </motion.a>
           ))}
           <motion.a
-            href="https://wa.me/573107547787"
+            href={MAIN_WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -83,7 +84,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/573107547787"
+              href={MAIN_WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-full font-body font-semibold"

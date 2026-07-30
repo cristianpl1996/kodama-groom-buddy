@@ -1,31 +1,6 @@
 import { motion } from "framer-motion";
-import { MapPin, Navigation, Car, Clock } from "lucide-react";
-
-const locations = [
-  {
-    name: "Sede Normandía",
-    address: "Cra 71 #53-84, Edificio Kashi, Local 102",
-    reference: "A dos cuadras de la Universidad Libre, cerca de la AV Boyacá",
-    mapUrl: "https://maps.app.goo.gl/SpdQJR8Q8u7SEPWx7",
-    transport: "Busca 'Edificio Kashi' en Google Maps o Waze",
-  },
-  {
-    name: "Sede Teusaquillo",
-    address: "Cra 58 #45-28, La Esmeralda",
-    reference: "Estación CAN de Transmilenio",
-    mapUrl: "https://maps.app.goo.gl/SpdQJR8Q8u7SEPWx7",
-    transport: "Busca 'Kodama Pet Care' en Google Maps o Waze",
-    parking: "No parquear sobre el andén, solo frente a la entrada del local",
-  },
-  /*{
-    name: "Sede Soacha",
-    address: "Centro Comercial Mi Plaza Soacha, Local 78",
-    reference: "Frente a la entrada vehicular del CC",
-    mapUrl: "https://maps.app.goo.gl/6unu3KcwageGrz9R6",
-    transport: "Busca 'Centro Comercial Mi Plaza Soacha' en Maps",
-    parking: "Zona de parqueo disponible en el CC",
-  },*/
-];
+import { MapPin, Navigation, Car, Clock, MessageCircle, Sparkles } from "lucide-react";
+import { sedes } from "@/data/sedes";
 
 const LocationsSection = () => {
   return (
@@ -45,62 +20,117 @@ const LocationsSection = () => {
             Nuestras sedes
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tenemos 2 ubicaciones en Bogotá para tu comodidad. 
-            ¡Elige la más cercana a ti!
+            Tenemos 3 ubicaciones en Bogotá para tu comodidad.
+            ¡Elige la más cercana a ti y agenda directamente con esa sede!
           </p>
         </motion.div>
 
         {/* Locations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-16">
-          {locations.map((location, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sedes.map((sede, index) => (
             <motion.div
-              key={location.name}
+              key={sede.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="bg-kodama-cream rounded-3xl overflow-hidden hover:shadow-xl transition-shadow group"
+              className="bg-kodama-cream rounded-3xl overflow-hidden hover:shadow-xl transition-shadow group flex flex-col"
             >
               {/* Header */}
-              <div className="bg-primary p-6">
-                <h3 className="font-display font-bold text-xl text-foreground text-center">
-                  {location.name}
+              <div
+                className={`p-6 ${
+                  sede.serviceType === "peluqueria" ? "bg-secondary" : "bg-primary"
+                }`}
+              >
+                <h3
+                  className={`font-display font-bold text-xl text-center ${
+                    sede.serviceType === "peluqueria"
+                      ? "text-secondary-foreground"
+                      : "text-foreground"
+                  }`}
+                >
+                  {sede.name}
                 </h3>
+                <p
+                  className={`font-body text-sm text-center mt-1 ${
+                    sede.serviceType === "peluqueria"
+                      ? "text-secondary-foreground/80"
+                      : "text-foreground/70"
+                  }`}
+                >
+                  {sede.service}
+                </p>
               </div>
 
               {/* Content */}
-              <div className="p-6 space-y-4">
+              <div className="p-6 space-y-4 flex flex-col flex-1">
                 <div className="flex items-start gap-3">
                   <MapPin className="text-secondary flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <p className="font-body font-semibold text-foreground">{location.address}</p>
-                    <p className="font-body text-sm text-muted-foreground">{location.reference}</p>
+                    <p className="font-body font-semibold text-foreground">{sede.address}</p>
+                    <p className="font-body text-sm text-muted-foreground">{sede.reference}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Navigation className="text-secondary flex-shrink-0 mt-1" size={20} />
-                  <p className="font-body text-sm text-muted-foreground">{location.transport}</p>
-                </div>
-
-                {location.parking && (
+                {sede.hours && (
                   <div className="flex items-start gap-3">
-                    <Car className="text-secondary flex-shrink-0 mt-1" size={20} />
-                    <p className="font-body text-sm text-muted-foreground">{location.parking}</p>
+                    <Clock className="text-secondary flex-shrink-0 mt-1" size={20} />
+                    <p className="font-body text-sm text-muted-foreground">{sede.hours}</p>
                   </div>
                 )}
 
-                <motion.a
-                  href={location.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="flex items-center justify-center gap-2 w-full bg-secondary text-secondary-foreground py-3 rounded-xl font-body font-semibold mt-4 group-hover:shadow-md transition-shadow"
-                >
-                  <MapPin size={18} />
-                  Ver en Mapa
-                </motion.a>
+                <div className="flex items-start gap-3">
+                  <Navigation className="text-secondary flex-shrink-0 mt-1" size={20} />
+                  <p className="font-body text-sm text-muted-foreground">{sede.transport}</p>
+                </div>
+
+                {sede.parking && (
+                  <div className="flex items-start gap-3">
+                    <Car className="text-secondary flex-shrink-0 mt-1" size={20} />
+                    <p className="font-body text-sm text-muted-foreground">{sede.parking}</p>
+                  </div>
+                )}
+
+                {sede.highlights && (
+                  <div className="flex flex-wrap gap-2">
+                    {sede.highlights.map((item) => (
+                      <span
+                        key={item}
+                        className="inline-flex items-center gap-1 bg-primary/25 text-foreground px-3 py-1 rounded-full font-body text-xs font-semibold"
+                      >
+                        <Sparkles size={12} />
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Actions */}
+                <div className="space-y-2 mt-auto pt-4">
+                  <motion.a
+                    href={sede.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-xl font-body font-semibold group-hover:shadow-md transition-shadow"
+                  >
+                    <MessageCircle size={18} />
+                    Agendar: {sede.phoneDisplay}
+                  </motion.a>
+
+                  <motion.a
+                    href={sede.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center justify-center gap-2 w-full bg-secondary text-secondary-foreground py-3 rounded-xl font-body font-semibold group-hover:shadow-md transition-shadow"
+                  >
+                    <MapPin size={18} />
+                    Ver en Mapa
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -115,7 +145,7 @@ const LocationsSection = () => {
         >
           <Clock className="text-secondary" size={24} />
           <p className="font-body text-foreground">
-            <span className="font-bold">Recuerda:</span> Solo atendemos con citas previamente confirmadas 
+            <span className="font-bold">Recuerda:</span> Solo atendemos con citas previamente confirmadas
             para mantener un servicio personalizado
           </p>
         </motion.div>
